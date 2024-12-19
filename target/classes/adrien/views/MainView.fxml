@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="mainPane" fx:controller="adrien.controllers.MainController" xmlns:fx="http://javafx.com/fxml">
+    
+    <!-- Carte et bâtiments au centre -->
+    <center>
+        <VBox alignment="TOP_LEFT" style="-fx-background-color: lightgrey;" spacing="10">
+            <fx:include source="MapView.fxml" fx:id="mapView"/>
+            <fx:include source="BuildingsView.fxml" fx:id="buildingsView"/>
+        </VBox>
+    </center>
+    
+    <!-- Ressources à droite -->
+    <right>
+        <VBox alignment="TOP_RIGHT" style="-fx-background-color: lightblue;" prefWidth="200">
+            <fx:include source="ResourcesView.fxml" fx:id="resourcesView"/>
+        </VBox>
+    </right>
+    
+</BorderPane>
